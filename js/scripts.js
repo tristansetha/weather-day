@@ -27,11 +27,17 @@ $(document).ready(function() {
         event.preventDefault();
         var inputtedDay = $("select#selectDay").val();
 
+        var tempArray = [...Array(70).keys()];
+        var precipArray = ["blizzard", "snow", "cloudy", "light-rain", "rain", "heavy-rain", "sunny", "windy", "oh-snap a tornado", "clear-sky"]
+        
+        var randomTemp = tempArray[Math.floor(Math.random() * tempArray.length)];
+        var randomPrecip = precipArray[Math.floor(Math.random() * precipArray.length)];
+
         var newDay = new Day(inputtedDay);
         var fiveDays = newDay.fiveDayforecast();
 
         for (i = 0; i < fiveDays.length; i++) {
-            $("ol#show-days").append("<br/><li>" + fiveDays[i] + "</li>");
+            $("ol#show-days").append("<br/><li>" + fiveDays[i] + "<br/>" + randomTemp + "<br/>" + randomPrecip + "</li>");
         }
         
     });
