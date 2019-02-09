@@ -23,7 +23,7 @@ $(document).ready(function() {
         var inputtedDay = $("select#selectDay").val();
 
         var tempArray = [...Array(70).keys()];
-        var precipArray = ["blizzard", "snow", "cloudy", "light-rain", "rain", "heavy-rain", "sunny", "windy", "oh-snap a tornado", "clear-sky"]
+        var precipArray = ["blizzard", "snow", "cloudy", "light-rain", "rain", "heavy-rain", "sunny", "windy", "oh-snap a tornado", "clear-sky"];
         
         tempArray[Math.floor(Math.random() * tempArray.length)];
         precipArray[Math.floor(Math.random() * precipArray.length)];
@@ -40,7 +40,7 @@ $(document).ready(function() {
             dayArray.push("thursday", "friday", "saturday", "sunday", "monday", "tuesday");
         } else if (inputtedDay == "friday") {
             dayArray.push("friday", "saturday", "sunday", "monday", "tuesday", "wednesday");
-        }
+        };
 
         var newDay0 = new Day(dayArray[0], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
         var newDay1 = new Day(dayArray[1], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
@@ -49,7 +49,7 @@ $(document).ready(function() {
         var newDay4 = new Day(dayArray[4], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
         var newDay5 = new Day(dayArray[5], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
 
-        $("li#day0").text("day:" + " " + newDay0.days);
+        $("li#day0").text(newDay0.days);
         $("li#day0-temp").text(newDay0.temp + " " + "degrees");
         $("li#day0-precip").text(newDay0.precip);
         
@@ -59,7 +59,7 @@ $(document).ready(function() {
         });
         
 
-        $("li#day1").text("day:" + " " + newDay1.days);
+        $("li#day1").text(newDay1.days);
         $("li#day1-temp").text(newDay1.temp + " " + "degrees");
         $("li#day1-precip").text(newDay1.precip);
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
             $("li#day1-classStatus").toggle();
         });
 
-        $("li#day2").text("day:" + " " + newDay2.days);
+        $("li#day2").text(newDay2.days);
         $("li#day2-temp").text(newDay2.temp + " " + "degrees");
         $("li#day2-precip").text(newDay2.precip);
 
@@ -77,7 +77,7 @@ $(document).ready(function() {
             $("li#day2-classStatus").toggle();
         });
         
-        $("li#day3").text("day:" + " " + newDay3.days);
+        $("li#day3").text(newDay3.days);
         $("li#day3-temp").text(newDay3.temp + " " + "degrees");
         $("li#day3-precip").text(newDay3.precip);
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
             $("li#day3-classStatus").toggle();
         });
 
-        $("li#day4").text("day:" + " " + newDay4.days);
+        $("li#day4").text(newDay4.days);
         $("li#day4-temp").text(newDay4.temp + " " + "degrees");
         $("li#day4-precip").text(newDay4.precip);
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
             $("li#day4-classStatus").toggle();
         });
 
-        $("li#day5").text("day:" + " " + newDay5.days);
+        $("li#day5").text(newDay5.days);
         $("li#day5-temp").text(newDay5.temp + " " + "degrees");
         $("li#day5-precip").text(newDay5.precip);
 
