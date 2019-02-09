@@ -1,21 +1,19 @@
-function Day(day, temp, precip) {
-    this.day = day,
+function Day(days, temp, precip) {
+    this.days = days,
     this.temp = temp,
-    this.precip = precip,
-    this.classStatus = undefined
+    this.precip = precip
 }
 
 Day.prototype.classStatus2 = function() {
-    if (this.precip == "blizzard" || "snow" || "oh-snap a tornado"){
-        return this.classStatus = "closed";
+    if (this.precip === "blizzard"){
+        return "closed";
+    } else if (this.precip === "snow"){
+        return "closed";
+    } else if (this.precip === "oh-snap a tornado") {
+        return "closed";
     } else {
-        return this.classStatus = "open";
-    }
-        
-}
-
-Day.prototype.addWeek = function() {
-    this.week.push(Day);
+        return "open";
+    }        
 }
 
 $(document).ready(function() {
@@ -51,54 +49,60 @@ $(document).ready(function() {
         var newDay4 = new Day(dayArray[4], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
         var newDay5 = new Day(dayArray[5], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
 
-        // var status0 = newDay0.classStatus
-        // var status1 = newDay1.classStatus
-        // var status2 = newDay2.classStatus
-        // var status3 = newDay3.classStatus
-        // var status4 = newDay4.classStatus
-        // var status5 = newDay5.classStatus
-
-
-        $("li#day0").text(newDay0.day);
-        $("li#day0-temp").text(newDay0.temp);
+        $("li#day0").text("day:" + " " + newDay0.days);
+        $("li#day0-temp").text(newDay0.temp + " " + "degrees");
         $("li#day0-precip").text(newDay0.precip);
-        $("li#day0-classStatus").text(newDay0.classStatus2);
-
-        $("li#day1").text(newDay1.day);
-        $("li#day1-temp").text(newDay1.temp);
-        $("li#day1-precip").text(newDay1.precip);
-        $("li#day1-classStatus").text(newDay1.classStatus2);
-
-        $("li#day2").text(newDay2.day);
-        $("li#day2-temp").text(newDay2.temp);
-        $("li#day2-precip").text(newDay2.precip);
-        $("li#day2-classStatus").text(newDay2.classStatus2);
         
-        $("li#day3").text(newDay3.day);
-        $("li#day3-temp").text(newDay3.temp);
+        $("button#check-class-status").click(function(){
+            $("li#day0-classStatus").text(newDay0.classStatus2());
+            $("li#day0-classStatus").toggle();
+        });
+        
+
+        $("li#day1").text("day:" + " " + newDay1.days);
+        $("li#day1-temp").text(newDay1.temp + " " + "degrees");
+        $("li#day1-precip").text(newDay1.precip);
+
+        $("button#check-class-status").click(function(){
+            $("li#day1-classStatus").text(newDay1.classStatus2());
+            $("li#day1-classStatus").toggle();
+        });
+
+        $("li#day2").text("day:" + " " + newDay2.days);
+        $("li#day2-temp").text(newDay2.temp + " " + "degrees");
+        $("li#day2-precip").text(newDay2.precip);
+
+        $("button#check-class-status").click(function(){
+            $("li#day2-classStatus").text(newDay2.classStatus2());
+            $("li#day2-classStatus").toggle();
+        });
+        
+        $("li#day3").text("day:" + " " + newDay3.days);
+        $("li#day3-temp").text(newDay3.temp + " " + "degrees");
         $("li#day3-precip").text(newDay3.precip);
-        $("li#day3-classStatus").text(newDay3.classStatus2);
 
-        $("li#day4").text(newDay4.day);
-        $("li#day4-temp").text(newDay4.temp);
+        $("button#check-class-status").click(function(){
+            $("li#day3-classStatus").text(newDay3.classStatus2());
+            $("li#day3-classStatus").toggle();
+        });
+
+        $("li#day4").text("day:" + " " + newDay4.days);
+        $("li#day4-temp").text(newDay4.temp + " " + "degrees");
         $("li#day4-precip").text(newDay4.precip);
-        $("li#day4-classStatus").text(newDay4.classStatus2);
 
-        $("li#day5").text(newDay5.day);
-        $("li#day5-temp").text(newDay5.temp);
+        $("button#check-class-status").click(function(){
+            $("li#day4-classStatus").text(newDay4.classStatus2());
+            $("li#day4-classStatus").toggle();
+        });
+
+        $("li#day5").text("day:" + " " + newDay5.days);
+        $("li#day5-temp").text(newDay5.temp + " " + "degrees");
         $("li#day5-precip").text(newDay5.precip);
-        $("li#day5-classStatus").text(newDay5.classStatus2);
 
-
-
-        // var fiveDays = newDay;
-
-        // for (i = 0; i < fiveDays.length; i++) {
-        //     $("ol#show-days").append("<br/><li>" + fiveDays[i] + "</li>");
-        // }
+        $("button#check-class-status").click(function(){
+            $("li#day5-classStatus").text(newDay5.classStatus2());
+            $("li#day5-classStatus").toggle();
+        });
         
     });
 });
-
-// "<br/>" +         tempArray[Math.floor(Math.random() * tempArray.length)];
-//  + "<br/>" + precipArray[Math.floor(Math.random() * precipArray.length)]; + 
