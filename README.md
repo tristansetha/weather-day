@@ -29,4 +29,6 @@ html, css, java script, jQuery
 
 ask me anything!!! tristansetha@gmail.com
 
+MIT
+
 Copyright (c) 2019
