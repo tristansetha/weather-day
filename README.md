@@ -4,7 +4,7 @@ By Tristan Setha
 
 ## Description
 
-A weather forecast that determines wether class is open or closed.
+A weather forecast that determines whether class is open or closed.
 
 
 ## Setup/Installation Requirements
