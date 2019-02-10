@@ -49,12 +49,19 @@ $(document).ready(function() {
         var newDay4 = new Day(dayArray[4], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
         var newDay5 = new Day(dayArray[5], tempArray[Math.floor(Math.random() * tempArray.length)], precipArray[Math.floor(Math.random() * precipArray.length)]);
 
+        $("button#check-class-status-0").show();
+        $("button#check-class-status-1").show();
+        $("button#check-class-status-2").show();
+        $("button#check-class-status-3").show();
+        $("button#check-class-status-4").show();
+        $("button#check-class-status-5").show();
+
         $("li#day0").text(newDay0.days);
         $("li#day0-temp").text(newDay0.temp + " " + "degrees");
         $("li#day0-precip").text(newDay0.precip);
         
-        $("button#check-class-status").click(function(){
-            $("li#day0-classStatus").text("class is" + " " + newDay0.classStatus2());
+        $("button#check-class-status-0").click(function(){
+            $("li#day0-classStatus").text("Class is" + " " + newDay0.classStatus2() + "!");
             $("li#day0-classStatus").toggle();
         });
         
@@ -63,8 +70,8 @@ $(document).ready(function() {
         $("li#day1-temp").text(newDay1.temp + " " + "degrees");
         $("li#day1-precip").text(newDay1.precip);
 
-        $("button#check-class-status").click(function(){
-            $("li#day1-classStatus").text("class is" + " " + newDay1.classStatus2());
+        $("button#check-class-status-1").click(function(){
+            $("li#day1-classStatus").text("Class is" + " " + newDay1.classStatus2() + "!");
             $("li#day1-classStatus").toggle();
         });
 
@@ -72,8 +79,8 @@ $(document).ready(function() {
         $("li#day2-temp").text(newDay2.temp + " " + "degrees");
         $("li#day2-precip").text(newDay2.precip);
 
-        $("button#check-class-status").click(function(){
-            $("li#day2-classStatus").text("class is" + " " + newDay2.classStatus2());
+        $("button#check-class-status-2").click(function(){
+            $("li#day2-classStatus").text("Class is" + " " + newDay2.classStatus2() + "!");
             $("li#day2-classStatus").toggle();
         });
         
@@ -81,8 +88,8 @@ $(document).ready(function() {
         $("li#day3-temp").text(newDay3.temp + " " + "degrees");
         $("li#day3-precip").text(newDay3.precip);
 
-        $("button#check-class-status").click(function(){
-            $("li#day3-classStatus").text("class is" + " " + newDay3.classStatus2());
+        $("button#check-class-status-3").click(function(){
+            $("li#day3-classStatus").text("Class is" + " " + newDay3.classStatus2() + "!");
             $("li#day3-classStatus").toggle();
         });
 
@@ -90,8 +97,8 @@ $(document).ready(function() {
         $("li#day4-temp").text(newDay4.temp + " " + "degrees");
         $("li#day4-precip").text(newDay4.precip);
 
-        $("button#check-class-status").click(function(){
-            $("li#day4-classStatus").text("class is" + " " + newDay4.classStatus2());
+        $("button#check-class-status-4").click(function(){
+            $("li#day4-classStatus").text("Class is" + " " + newDay4.classStatus2() + "!");
             $("li#day4-classStatus").toggle();
         });
 
@@ -99,8 +106,8 @@ $(document).ready(function() {
         $("li#day5-temp").text(newDay5.temp + " " + "degrees");
         $("li#day5-precip").text(newDay5.precip);
 
-        $("button#check-class-status").click(function(){
-            $("li#day5-classStatus").text("class is" + " " + newDay5.classStatus2());
+        $("button#check-class-status-5").click(function(){
+            $("li#day5-classStatus").text("Class is" + " " + newDay5.classStatus2() + "!");
             $("li#day5-classStatus").toggle();
         });
         

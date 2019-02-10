@@ -23,3 +23,15 @@ body {
 select#selectDay {
     color: black;
 }
+
+button#check-class-status-0, button#check-class-status-1, button#check-class-status-2, button#check-class-status-3, button#check-class-status-4, button#check-class-status-5 {
+    display: none;
+    background-color:rgba(0, 0, 0, 0.0);
+    float: right;
+    border: 50%;
+}
+
+li#day0-classStatus, li#day1-classStatus, li#day2-classStatus, li#day3-classStatus, li#day4-classStatus, li#day5-classStatus {
+    font-weight: bolder;
+    font-size: 15px;
+}
