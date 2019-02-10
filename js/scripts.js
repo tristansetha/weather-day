@@ -1,7 +1,7 @@
 function Day(days, temp, precip) {
     this.days = days,
     this.temp = temp,
-    this.precip = precip
+    this.precip = precip;
 }
 
 Day.prototype.classStatus2 = function() {
@@ -14,7 +14,7 @@ Day.prototype.classStatus2 = function() {
     } else {
         return "open";
     }        
-}
+};
 
 $(document).ready(function() {
     $("form#form-weather").submit(function(event){
