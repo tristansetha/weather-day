@@ -2,10 +2,24 @@
     font-style: helvetica;
     font-weight: bold;
     font-size: 20px;
+    color: white;
 }
 
 .jumbotron {
     background-color:rgba(0, 0, 0, 0.0);
 }
 
+h1 {
+    font-family: helvetica;
+    font-style: oblique;
+    font-weight: bolder;
+}
 
+body {
+    background-image: url(../img/background1.jpg);
+    color: white;
+}
+
+select#selectDay {
+    color: black;
+}

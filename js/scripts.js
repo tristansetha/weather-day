@@ -5,11 +5,11 @@ function Day(days, temp, precip) {
 }
 
 Day.prototype.classStatus2 = function() {
-    if (this.precip === "blizzard"){
+    if (this.precip == "blizzard"){
         return "closed";
-    } else if (this.precip === "snow"){
+    } else if (this.precip == "snow"){
         return "closed";
-    } else if (this.precip === "oh-snap a tornado") {
+    } else if (this.precip == "tornado") {
         return "closed";
     } else {
         return "open";
@@ -23,7 +23,7 @@ $(document).ready(function() {
         var inputtedDay = $("select#selectDay").val();
 
         var tempArray = [...Array(70).keys()];
-        var precipArray = ["blizzard", "snow", "cloudy", "light-rain", "rain", "heavy-rain", "sunny", "windy", "oh-snap a tornado", "clear-sky"];
+        var precipArray = ["blizzard", "snow", "cloudy", "light-rain", "rain", "heavy-rain", "sunny", "windy", "tornado", "clear-sky"];
         
         tempArray[Math.floor(Math.random() * tempArray.length)];
         precipArray[Math.floor(Math.random() * precipArray.length)];
@@ -54,7 +54,7 @@ $(document).ready(function() {
         $("li#day0-precip").text(newDay0.precip);
         
         $("button#check-class-status").click(function(){
-            $("li#day0-classStatus").text(newDay0.classStatus2());
+            $("li#day0-classStatus").text("class is" + " " + newDay0.classStatus2());
             $("li#day0-classStatus").toggle();
         });
         
@@ -64,7 +64,7 @@ $(document).ready(function() {
         $("li#day1-precip").text(newDay1.precip);
 
         $("button#check-class-status").click(function(){
-            $("li#day1-classStatus").text(newDay1.classStatus2());
+            $("li#day1-classStatus").text("class is" + " " + newDay1.classStatus2());
             $("li#day1-classStatus").toggle();
         });
 
@@ -73,7 +73,7 @@ $(document).ready(function() {
         $("li#day2-precip").text(newDay2.precip);
 
         $("button#check-class-status").click(function(){
-            $("li#day2-classStatus").text(newDay2.classStatus2());
+            $("li#day2-classStatus").text("class is" + " " + newDay2.classStatus2());
             $("li#day2-classStatus").toggle();
         });
         
@@ -82,7 +82,7 @@ $(document).ready(function() {
         $("li#day3-precip").text(newDay3.precip);
 
         $("button#check-class-status").click(function(){
-            $("li#day3-classStatus").text(newDay3.classStatus2());
+            $("li#day3-classStatus").text("class is" + " " + newDay3.classStatus2());
             $("li#day3-classStatus").toggle();
         });
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
         $("li#day4-precip").text(newDay4.precip);
 
         $("button#check-class-status").click(function(){
-            $("li#day4-classStatus").text(newDay4.classStatus2());
+            $("li#day4-classStatus").text("class is" + " " + newDay4.classStatus2());
             $("li#day4-classStatus").toggle();
         });
 
@@ -100,7 +100,7 @@ $(document).ready(function() {
         $("li#day5-precip").text(newDay5.precip);
 
         $("button#check-class-status").click(function(){
-            $("li#day5-classStatus").text(newDay5.classStatus2());
+            $("li#day5-classStatus").text("class is" + " " + newDay5.classStatus2());
             $("li#day5-classStatus").toggle();
         });
         
