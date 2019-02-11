@@ -31,4 +31,4 @@ ask me anything!!! tristansetha@gmail.com
 
 MIT
 
-Copyright (c) 2019
+Copyright (c) 2019 Tristan Setha
