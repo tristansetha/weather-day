@@ -20,7 +20,7 @@ or visit https://tristansetha.github.io/weather-day/
 
 |   Behavior                          | Input Example | Output Example |
 | ------------------------------------|:-------------:| :-------------:|
-|  Outputs next 5 days with random precipitation, random temperature, and class status button depending on precipitation |  tuesday   |  tuesday: 63 degrees, sunny, wednesday: 55 degrees, raining........ Class status              |
+|  Outputs next 5 days with random precipitation, random temperature, and class status button depending on precipitation |  tuesday   |  tuesday: 63 degrees, sunny, wednesday: 55 degrees, raining, thursday: 20 degrees, snow, friday: 60 degrees, raining, saturday: 65 degrees, sunny, sunday: 80 degrees, sunny rClass status              |
 |  show class status on click after initial day input, then click button  | click class status button| class is open!  |
 
 
